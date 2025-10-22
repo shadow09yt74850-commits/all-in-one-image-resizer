@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+.card {
+  @apply bg-gray-900 rounded-xl p-6 shadow-lg transition-transform duration-500 hover:scale-105 hover:bg-cyan-400 hover:text-black text-center;
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+}
+
+a {
+  transition: all 0.3s ease-in-out;
+}
+
+.glow {
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff;
+}
