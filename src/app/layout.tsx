@@ -1,13 +1,22 @@
+// src/app/layout.tsx
 import './globals.css';
-import React from 'react';
+import { ReactNode } from 'react';
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export const metadata = {
+  title: 'All-in-One Image Resizer',
+  description: 'Resize and compress images easily',
+};
+
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <head>
+        {/* Google Search Console verification meta tag */}
+        <meta name="google-site-verification" content="2uAkDfXAO16opMrA1-ds2pPWbVEysp0pyuYELBjp4Rs" />
+      </head>
+      <body>
+        {children}
+      </body>
     </html>
   );
-  <head>
-    <meta name="google-site-verification" content="2uAkDfXAO16opMrA1-ds2pPWbVEysp0pyuYELBjp4Rs" />
-  </head>
 }
