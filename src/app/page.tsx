@@ -1,42 +1,99 @@
 import React from "react";
 import Card from "./components/Card";
+import Head from "next/head";
 
 const projects = [
-  { name: "Photo Resizer", description: "Resize images online instantly.", link: "/photo-resizer" },
-  { name: "Compress Images", description: "Reduce image file size quickly.", link: "#" },
-  { name: "Crop Images", description: "Crop images to desired dimensions.", link: "#" },
-  { name: "Convert Format", description: "Change image formats easily.", link: "#" },
-  { name: "Future Project", description: "Coming soon...", link: "#" },
+  { name: "Photo Resizer", description: "Resize images online instantly for free.", link: "/photo-resizer" },
+  { name: "Compress Images", description: "Reduce image file size quickly without losing quality.", link: "#" },
+  { name: "Crop Images", description: "Crop images to perfect dimensions for social media or blogs.", link: "#" },
+  { name: "Convert Format", description: "Easily convert images between JPG, PNG, and WebP.", link: "#" },
+  { name: "Future Project", description: "More tools coming soon...", link: "#" },
 ];
 
 const articles = [
   {
     title: "Why Image Resizing Matters",
     content:
-      "Images take up bandwidth and storage. Resizing them optimizes websites, improves load speed, and saves space.",
+      "Large images slow down websites and apps. Our image resizer optimizes pictures to load faster and save bandwidth — essential for SEO and user experience.",
   },
   {
-    title: "All-in-One Image Hub",
+    title: "All-in-One Image Hub Tools",
     content:
-      "Our hub allows users to quickly resize, compress, crop, and convert images for any purpose — social media, presentations, blogs, and more.",
+      "Resize, compress, crop, and convert your images online in seconds. Our free image editor helps creators, developers, and marketers optimize visuals with ease.",
   },
   {
-    title: "Editing Made Simple",
+    title: "Editing Made Simple and Fast",
     content:
-      "Everyone works with images. Our tools simplify image editing so anyone can get professional results instantly.",
+      "You don’t need Photoshop to get perfect images. With All-in-One Image Hub, anyone can resize and optimize images instantly from their browser.",
   },
 ];
 
 export default function Home() {
   return (
     <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white min-h-screen scroll-smooth">
+      <Head>
+        <title>All-in-One Image Hub | Free Online Image Resizer & Compressor</title>
+        <meta
+          name="description"
+          content="Resize, compress, crop, and convert images online for free. Fast, secure, and high-quality — perfect for social media, blogs, and developers."
+        />
+        <meta
+          name="keywords"
+          content="image resizer, image compressor, online image tools, photo resizer, image converter, free photo editor, resize jpg png webp"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="All-in-One Image Hub - Free Online Image Tools" />
+        <meta
+          property="og:description"
+          content="All-in-One Image Hub lets you resize, compress, and convert images instantly. 100% free online image editor."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://all-in-one-image-resizer-hub.vercel.app/" />
+        <meta property="og:image" content="/window.svg" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Is the image resizer free to use?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, All-in-One Image Hub is 100% free for all image resizing, compression, and conversion tools."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Does image resizing reduce quality?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Our smart algorithms maintain quality while reducing file size for faster performance."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can I resize multiple images at once?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Currently, resizing is single-file based, but batch processing will be added soon."
+                  }
+                }
+              ]
+            }),
+          }}
+        />
+      </Head>
+
       {/* Header */}
       <header className="flex flex-col items-center py-20 px-4">
         <h1 className="text-5xl font-bold text-cyan-400 mb-4 animate-pulse">
           ⚡ All-in-One Image Hub
         </h1>
         <p className="mb-12 text-gray-300 text-lg text-center max-w-2xl">
-          Explore all my projects in one hub. Resize, compress, crop, convert, and manage images efficiently.
+          Resize, compress, crop, and convert images online instantly. Fast, free, and perfect for content creators and developers.
         </p>
       </header>
 
