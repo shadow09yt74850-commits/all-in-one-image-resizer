@@ -1,0 +1,9 @@
+# Allow all crawlers full access
+User-agent: *
+Allow: /
+
+# Host (without https://)
+Host: all-in-one-image-resizer-hub.vercel.app
+
+# Sitemap (full URL)
+Sitemap: https://all-in-one-image-resizer-hub.vercel.app/sitemap.xml
